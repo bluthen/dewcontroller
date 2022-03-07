@@ -29,7 +29,7 @@ L SST_kicad_sym:4ch_pwm_board U2
 U 1 1 621E568F
 P 4950 3700
 F 0 "U2" H 4950 4375 50  0000 C CNN
-F 1 "4ch_pwm_board" H 4950 4284 50  0000 C CNN
+F 1 "4ch_pwm_board (YYNMOS-4)" H 4950 4284 50  0000 C CNN
 F 2 "" H 4950 3700 50  0001 C CNN
 F 3 "" H 4950 3700 50  0001 C CNN
 	1    4950 3700
@@ -57,27 +57,6 @@ F 3 "~" H 3400 4460 50  0001 C CNN
 	1    3350 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4350 4050 4200 4050
-Wire Wire Line
-	4200 4050 4200 3850
-Wire Wire Line
-	4200 3850 4350 3850
-Wire Wire Line
-	4200 3850 4200 3650
-Wire Wire Line
-	4200 3650 4350 3650
-Connection ~ 4200 3850
-Wire Wire Line
-	4200 3650 4200 3450
-Wire Wire Line
-	4200 3450 4350 3450
-Connection ~ 4200 3650
-Wire Wire Line
-	4200 3450 4200 3250
-Wire Wire Line
-	4200 3250 4350 3250
-Connection ~ 4200 3450
 Wire Wire Line
 	3650 4600 3850 4600
 Wire Wire Line
@@ -107,9 +86,6 @@ F 3 "" H 3950 4150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4150 4050 4200 4050
-Connection ~ 4200 4050
-Wire Wire Line
 	3950 4150 4350 4150
 $Comp
 L power:GND1 #PWR0103
@@ -133,43 +109,8 @@ F 3 "" H 4150 4050 50  0001 C CNN
 	1    4150 4050
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND1 #PWR0105
-U 1 1 62201743
-P 3450 3750
-F 0 "#PWR0105" H 3450 3500 50  0001 C CNN
-F 1 "GND1" H 3455 3577 50  0000 C CNN
-F 2 "" H 3450 3750 50  0001 C CNN
-F 3 "" H 3450 3750 50  0001 C CNN
-	1    3450 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3300 3750 3450 3750
 Wire Wire Line
 	3300 3600 4000 3600
-Wire Wire Line
-	4000 3600 4000 3350
-Wire Wire Line
-	4000 3350 4350 3350
-Wire Wire Line
-	4350 3550 3450 3550
-Wire Wire Line
-	3450 3550 3450 3450
-Wire Wire Line
-	3450 3450 3300 3450
-Wire Wire Line
-	4350 3750 3900 3750
-Wire Wire Line
-	3900 3750 3900 3300
-Wire Wire Line
-	3900 3300 3300 3300
-Wire Wire Line
-	3300 3150 3800 3150
-Wire Wire Line
-	3800 3150 3800 3950
-Wire Wire Line
-	3800 3950 4350 3950
 $Comp
 L power:GND2 #PWR0106
 U 1 1 62204198
@@ -241,4 +182,43 @@ Wire Wire Line
 	5800 4050 5550 4050
 Text Notes 2300 6150 0    118  ~ 0
 Assembly Note: PWM Board has headers. Solder wires on DewRCA and Teensy side.
+Wire Wire Line
+	4150 4050 4350 4050
+NoConn ~ 4350 3350
+NoConn ~ 4350 3550
+NoConn ~ 4350 3750
+NoConn ~ 4350 3950
+Wire Wire Line
+	4000 3600 4000 3250
+Wire Wire Line
+	4000 3250 4350 3250
+$Comp
+L power:+12V #PWR?
+U 1 1 6226C0A9
+P 3450 3750
+F 0 "#PWR?" H 3450 3600 50  0001 C CNN
+F 1 "+12V" V 3465 3878 50  0000 L CNN
+F 2 "" H 3450 3750 50  0001 C CNN
+F 3 "" H 3450 3750 50  0001 C CNN
+	1    3450 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 3750 3450 3750
+Wire Wire Line
+	3300 3450 4350 3450
+Wire Wire Line
+	3300 3300 3900 3300
+Wire Wire Line
+	3900 3300 3900 3650
+Wire Wire Line
+	3900 3650 4350 3650
+Wire Wire Line
+	3300 3150 3850 3150
+Wire Wire Line
+	3850 3150 3850 3850
+Wire Wire Line
+	3850 3850 4350 3850
+Text Notes 1500 4150 0    50   ~ 0
+Note: This version 1.00 of RCA PCB has an error, what is \nlabeled as GND should be V+. This is why 12V is connected\nto GND.
 $EndSCHEMATC
