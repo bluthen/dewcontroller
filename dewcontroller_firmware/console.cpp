@@ -7,8 +7,8 @@ static SerialCommand sCmd;
 
 void console_help(const char* cmd) {
   Serial.println("Commands:");
-  Serial.println(" set [channel] [value]    Set channel value to value 0-100, 100 is fully on");
-  Serial.println(" get [channel]            Get channel value");
+  Serial.println(" set [channel] [value]    Set channel (1-4) to value (0-100), 100 is fully on");
+  Serial.println(" get [channel]            Get a channel(1-4) value");
   Serial.println("");
   Serial.print("$ ");
 }
@@ -83,6 +83,6 @@ void console_init() {
 }
 
 
-void sst_console_read_serial() {
+void console_read_serial() {
   sCmd.readSerial();
 }
