@@ -25,25 +25,14 @@ F 3 "" H 7650 3550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SST_kicad_sym:4ch_pwm_board U2
-U 1 1 621E568F
-P 4950 3700
-F 0 "U2" H 4950 4375 50  0000 C CNN
-F 1 "4ch_pwm_board (YYNMOS-4)" H 4950 4284 50  0000 C CNN
-F 2 "" H 4950 3700 50  0001 C CNN
-F 3 "" H 4950 3700 50  0001 C CNN
-	1    4950 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L SST_kicad_sym:dewrca U1
 U 1 1 621ED17C
-P 3150 3450
-F 0 "U1" V 3550 3600 50  0000 L CNN
-F 1 "dewrca" V 2750 3450 50  0000 L CNN
-F 2 "" H 3300 3450 50  0001 C CNN
-F 3 "" H 3300 3450 50  0001 C CNN
-	1    3150 3450
+P 3700 3500
+F 0 "U1" V 4100 3650 50  0000 L CNN
+F 1 "dewrca" V 3300 3500 50  0000 L CNN
+F 2 "" H 3850 3500 50  0001 C CNN
+F 3 "" H 3850 3500 50  0001 C CNN
+	1    3700 3500
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -75,19 +64,6 @@ $EndComp
 Wire Wire Line
 	3650 4400 3800 4400
 $Comp
-L power:+12V #PWR0102
-U 1 1 621F9359
-P 3950 4150
-F 0 "#PWR0102" H 3950 4000 50  0001 C CNN
-F 1 "+12V" V 3965 4278 50  0000 L CNN
-F 2 "" H 3950 4150 50  0001 C CNN
-F 3 "" H 3950 4150 50  0001 C CNN
-	1    3950 4150
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3950 4150 4350 4150
-$Comp
 L power:GND1 #PWR0103
 U 1 1 621FCBF1
 P 3850 4700
@@ -98,19 +74,6 @@ F 3 "" H 3850 4700 50  0001 C CNN
 	1    3850 4700
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND1 #PWR0104
-U 1 1 621FD5E4
-P 4150 4050
-F 0 "#PWR0104" H 4150 3800 50  0001 C CNN
-F 1 "GND1" V 4155 3922 50  0000 R CNN
-F 2 "" H 4150 4050 50  0001 C CNN
-F 3 "" H 4150 4050 50  0001 C CNN
-	1    4150 4050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3300 3600 4000 3600
 $Comp
 L power:GND2 #PWR0106
 U 1 1 62204198
@@ -126,99 +89,205 @@ Wire Wire Line
 	6500 2900 6500 2950
 Wire Wire Line
 	6500 2950 6650 2950
-Wire Wire Line
-	5550 3950 5700 3950
-Wire Wire Line
-	5700 3950 5700 3750
-Wire Wire Line
-	5700 3350 5550 3350
-Wire Wire Line
-	5550 3550 5700 3550
-Connection ~ 5700 3550
-Wire Wire Line
-	5700 3550 5700 3350
-Wire Wire Line
-	5550 3750 5700 3750
-Connection ~ 5700 3750
-Wire Wire Line
-	5700 3750 5700 3550
-$Comp
-L power:GND2 #PWR0107
-U 1 1 62208763
-P 5700 3300
-F 0 "#PWR0107" H 5700 3050 50  0001 C CNN
-F 1 "GND2" H 5705 3127 50  0000 C CNN
-F 2 "" H 5700 3300 50  0001 C CNN
-F 3 "" H 5700 3300 50  0001 C CNN
-	1    5700 3300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5700 3300 5700 3350
-Connection ~ 5700 3350
-Wire Wire Line
-	6650 3350 5900 3350
-Wire Wire Line
-	5900 3350 5900 3450
-Wire Wire Line
-	5900 3450 5550 3450
-Wire Wire Line
-	6650 3450 5950 3450
-Wire Wire Line
-	5950 3450 5950 3650
-Wire Wire Line
-	5950 3650 5550 3650
-Wire Wire Line
-	6650 3650 6050 3650
-Wire Wire Line
-	6050 3650 6050 3850
-Wire Wire Line
-	6050 3850 5550 3850
-Wire Wire Line
-	6650 3950 5800 3950
-Wire Wire Line
-	5800 3950 5800 4050
-Wire Wire Line
-	5800 4050 5550 4050
 Text Notes 2300 6150 0    118  ~ 0
-Assembly Note: PWM Board has headers. Solder wires on DewRCA and Teensy side.
-Wire Wire Line
-	4150 4050 4350 4050
-NoConn ~ 4350 3350
-NoConn ~ 4350 3550
-NoConn ~ 4350 3750
-NoConn ~ 4350 3950
-Wire Wire Line
-	4000 3600 4000 3250
-Wire Wire Line
-	4000 3250 4350 3250
+Assembly Note: Relay Board has screw terminals. Solder wires \non DewRCA and Teensy side.
+$Comp
+L SST_kicad_sym:SainSmart4chSSRelay U?
+U 1 1 62299EFB
+P 4950 3550
+F 0 "U?" H 4950 4215 50  0000 C CNN
+F 1 "SainSmart4chSSRelay" H 4950 4124 50  0000 C CNN
+F 2 "" H 4950 3550 50  0001 C CNN
+F 3 "" H 4950 3550 50  0001 C CNN
+	1    4950 3550
+	1    0    0    -1  
+$EndComp
 $Comp
 L power:+12V #PWR?
-U 1 1 6226C0A9
-P 3450 3750
-F 0 "#PWR?" H 3450 3600 50  0001 C CNN
-F 1 "+12V" V 3465 3878 50  0000 L CNN
-F 2 "" H 3450 3750 50  0001 C CNN
-F 3 "" H 3450 3750 50  0001 C CNN
-	1    3450 3750
+U 1 1 622A23CE
+P 4250 3100
+F 0 "#PWR?" H 4250 2950 50  0001 C CNN
+F 1 "+12V" H 4265 3273 50  0000 C CNN
+F 2 "" H 4250 3100 50  0001 C CNN
+F 3 "" H 4250 3100 50  0001 C CNN
+	1    4250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3100 4250 3150
+Wire Wire Line
+	4250 3150 4350 3150
+Wire Wire Line
+	4250 3150 4250 3400
+Wire Wire Line
+	4250 3400 4350 3400
+Connection ~ 4250 3150
+Wire Wire Line
+	4250 3400 4250 3650
+Wire Wire Line
+	4250 3650 4350 3650
+Connection ~ 4250 3400
+Wire Wire Line
+	4250 3650 4250 3900
+Wire Wire Line
+	4250 3900 4350 3900
+Connection ~ 4250 3650
+Wire Wire Line
+	3850 3200 4050 3200
+Wire Wire Line
+	4050 3200 4050 3250
+Wire Wire Line
+	4050 3250 4350 3250
+Wire Wire Line
+	3850 3350 4150 3350
+Wire Wire Line
+	4150 3350 4150 3500
+Wire Wire Line
+	4150 3500 4350 3500
+Wire Wire Line
+	3850 3500 4100 3500
+Wire Wire Line
+	4100 3500 4100 3750
+Wire Wire Line
+	4100 3750 4350 3750
+Wire Wire Line
+	3850 3650 4050 3650
+Wire Wire Line
+	4050 3650 4050 4000
+Wire Wire Line
+	4050 4000 4350 4000
+Wire Wire Line
+	3850 3800 3900 3800
+Wire Wire Line
+	3900 3800 3900 3950
+Wire Wire Line
+	5550 3400 5750 3400
+Wire Wire Line
+	5750 3400 5750 3350
+Wire Wire Line
+	5750 3350 6650 3350
+Wire Wire Line
+	5550 3500 5800 3500
+Wire Wire Line
+	5800 3500 5800 3450
+Wire Wire Line
+	5800 3450 6650 3450
+Wire Wire Line
+	5550 3600 5950 3600
+Wire Wire Line
+	5950 3600 5950 3650
+Wire Wire Line
+	5950 3650 6650 3650
+Wire Wire Line
+	5950 3700 5950 3750
+Wire Wire Line
+	5950 3750 6250 3750
+Wire Wire Line
+	6250 3750 6250 3950
+Wire Wire Line
+	5550 3700 5950 3700
+Wire Wire Line
+	6250 3950 6650 3950
+$Comp
+L power:GND1 #PWR?
+U 1 1 622AD1AF
+P 3900 3950
+F 0 "#PWR?" H 3900 3700 50  0001 C CNN
+F 1 "GND1" H 3905 3777 50  0000 C CNN
+F 2 "" H 3900 3950 50  0001 C CNN
+F 3 "" H 3900 3950 50  0001 C CNN
+	1    3900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND2 #PWR?
+U 1 1 622ADA3E
+P 5850 3850
+F 0 "#PWR?" H 5850 3600 50  0001 C CNN
+F 1 "GND2" H 5855 3677 50  0000 C CNN
+F 2 "" H 5850 3850 50  0001 C CNN
+F 3 "" H 5850 3850 50  0001 C CNN
+	1    5850 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3800 5850 3800
+Wire Wire Line
+	5850 3800 5850 3850
+Wire Wire Line
+	5550 3900 5650 3900
+Wire Wire Line
+	5650 3900 5650 4050
+$Comp
+L power:+5V #PWR?
+U 1 1 622B0073
+P 5650 4050
+F 0 "#PWR?" H 5650 3900 50  0001 C CNN
+F 1 "+5V" H 5665 4223 50  0000 C CNN
+F 2 "" H 5650 4050 50  0001 C CNN
+F 3 "" H 5650 4050 50  0001 C CNN
+	1    5650 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 622B4D67
+P 8750 5250
+F 0 "#PWR?" H 8750 5100 50  0001 C CNN
+F 1 "+5V" V 8765 5378 50  0000 L CNN
+F 2 "" H 8750 5250 50  0001 C CNN
+F 3 "" H 8750 5250 50  0001 C CNN
+	1    8750 5250
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3300 3750 3450 3750
-Wire Wire Line
-	3300 3450 4350 3450
-Wire Wire Line
-	3300 3300 3900 3300
-Wire Wire Line
-	3900 3300 3900 3650
-Wire Wire Line
-	3900 3650 4350 3650
-Wire Wire Line
-	3300 3150 3850 3150
-Wire Wire Line
-	3850 3150 3850 3850
-Wire Wire Line
-	3850 3850 4350 3850
-Text Notes 1500 4150 0    50   ~ 0
-Note: This version 1.00 of RCA PCB has an error, what is \nlabeled as GND should be V+. This is why 12V is connected\nto GND.
+	8650 5250 8750 5250
+NoConn ~ 6650 3050
+NoConn ~ 6650 3150
+NoConn ~ 6650 3250
+NoConn ~ 6650 3550
+NoConn ~ 6650 3750
+NoConn ~ 6650 3850
+NoConn ~ 6650 4050
+NoConn ~ 6650 4150
+NoConn ~ 6650 4250
+NoConn ~ 6650 4350
+NoConn ~ 6650 4450
+NoConn ~ 6650 4550
+NoConn ~ 6650 4650
+NoConn ~ 6650 4750
+NoConn ~ 6650 4850
+NoConn ~ 6650 4950
+NoConn ~ 6650 5050
+NoConn ~ 6650 5150
+NoConn ~ 6650 5250
+NoConn ~ 6650 5350
+NoConn ~ 6650 5450
+NoConn ~ 6650 5550
+NoConn ~ 6650 5650
+NoConn ~ 8650 5650
+NoConn ~ 8650 5550
+NoConn ~ 8650 5450
+NoConn ~ 8650 5350
+NoConn ~ 8650 5150
+NoConn ~ 8650 5050
+NoConn ~ 8650 4950
+NoConn ~ 8650 4850
+NoConn ~ 8650 4550
+NoConn ~ 8650 4450
+NoConn ~ 8650 4350
+NoConn ~ 8650 4250
+NoConn ~ 8650 4150
+NoConn ~ 8650 4050
+NoConn ~ 8650 3950
+NoConn ~ 8650 3850
+NoConn ~ 8650 3750
+NoConn ~ 8650 3650
+NoConn ~ 8650 3550
+NoConn ~ 8650 3450
+NoConn ~ 8650 3350
+NoConn ~ 8650 3250
+NoConn ~ 8650 3150
+NoConn ~ 8650 3050
+NoConn ~ 8650 2950
 $EndSCHEMATC
